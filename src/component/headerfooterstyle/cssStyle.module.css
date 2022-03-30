@@ -1,0 +1,41 @@
+.mother{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.flex_container {
+    /* flex-wrap: wrap; */
+    display: flex;
+    justify-content: center;
+    /* direction: rtl; */
+  }
+.box{
+    margin-top: 44px;
+    Width : 1040px;
+    background: white;
+    height: 42px;
+}
+.yoozify{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    color: #0A9396;
+}
+
+.menuone{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: blue;
+    direction: ltr;
+    /* float: left; */
+}
+.menu{
+    background:greenyellow;
+    margin: 0 1% 0;
+    font-family: iranSans;
+    
+    font-size: 1.2vw;
+    
+}
