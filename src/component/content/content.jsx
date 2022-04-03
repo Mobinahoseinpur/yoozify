@@ -1,17 +1,15 @@
-import React,{Fragment} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from './content.module.css';
+import React,{Fragment} from 'react'
+import styles from '../content/Content.module.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-const Content = (props) => {
+const Content = () => {
     return ( 
         <Fragment>
-            <div className={`${styles.content_} container row container-fluid main_container`}>
-                <p>{props.children}</p> 
+            <div className={`${styles.content_} content`}>
+                back
             </div>
-            
         </Fragment>
      );
 }
  
 export default Content;
- 

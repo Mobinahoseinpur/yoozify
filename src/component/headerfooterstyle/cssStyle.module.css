@@ -1,41 +1,46 @@
-.mother{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.mother {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .flex_container {
-    /* flex-wrap: wrap; */
-    display: flex;
-    justify-content: center;
-    /* direction: rtl; */
-  }
-.box{
-    margin-top: 44px;
-    Width : 1040px;
-    background: white;
-    height: 42px;
+  /* flex-wrap: wrap; */
+  display: flex;
+  justify-content: center;
+  /* direction: rtl; */
 }
-.yoozify{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 28px;
-    color: #0A9396;
+.box {
+  display: flex;
+  margin-top: 44px;
+  width: 1040px;
+  background: white;
+  height: 42px;
+}
+.yoozify {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #0a9396;
+  direction: rtl;
 }
 
-.menuone{
-    display: flex;
-    flex-wrap: nowrap;
-    background-color: blue;
-    direction: ltr;
-    /* float: left; */
+.menuone {
+  display: flex;
+  flex-wrap: nowrap;
 }
-.menu{
-    background:greenyellow;
-    margin: 0 1% 0;
-    font-family: iranSans;
-    
-    font-size: 1.2vw;
-    
+.menu {
+  margin: 0 1.4% 0;
+  font-family: iranSans;
+  /* border: 2px solid rgb(248, 148, 25); */
+  font-size: 1.2vw;
 }
+
+.menu:hover {
+  cursor: pointer;
+  border-bottom: 4px solid  #0a9396;
+  ;
+  height: 80%;
+}
+
