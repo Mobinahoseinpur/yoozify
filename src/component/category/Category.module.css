@@ -1,0 +1,16 @@
+.mainbox{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    margin: 0 auto;
+    align-content:center;
+}
+.box{
+    height: 136px;
+    margin:0.8%;
+    border-radius: 8px;
+    float: left;
+    box-shadow: brown;
+    background: red;
+    box-shadow: 3px 3px 50px 15px rgba(176, 176, 176, 25%);
+}
