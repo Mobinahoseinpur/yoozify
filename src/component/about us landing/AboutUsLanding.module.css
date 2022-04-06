@@ -1,0 +1,28 @@
+.mainbox{
+display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: stretch;
+	align-content: stretch;
+    /* background: url('./Elements.svg') no-repeat 70%; 
+    background-size: 80% ;*/
+}
+.textbox{
+	width: 50%;
+	background-color:rgb(200, 127, 255);
+}
+
+.textbox .textbox_title,.pararaph {
+	direction: rtl;
+}
+.imgbox{
+	width: 50%;
+	/* background-color:aquamarine; */
+}
+.btn{
+	background: none;
+	border-radius: 5px;
+	border:1px solid  #0A9396;
+	color: #0A9396 ;
+}

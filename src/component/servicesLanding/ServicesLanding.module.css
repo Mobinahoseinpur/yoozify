@@ -1,0 +1,18 @@
+.box{
+display: flex;
+justify-content: space-around;
+width: 335px;
+height: 562px;
+background: #FFFFFF;
+box-shadow: 2px 2px 30px rgba(176, 176, 176, 0.25);
+border-radius: 10px;
+}
+
+.photo{
+display: flex;
+
+width: 271px;
+height: 174px;
+
+
+}

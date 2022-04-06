@@ -1,5 +1,5 @@
 /* try */
 .content_{
-    background: rgb(153, 153, 153);
+    border:4px solid rgb(153, 153, 153);
     max-height: 100%;
 }
