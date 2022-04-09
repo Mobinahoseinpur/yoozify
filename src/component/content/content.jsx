@@ -5,6 +5,8 @@ import Introduction from '../introductionLanding/Introduction';
 import Category from '../category/Category';
 import AboutUsLanding from '../about us landing/AboutUsLanding';
 import ServicesLanding from '../servicesLanding/ServicesLanding';
+import ProjectSamples from '../project samples/ProjectSamples';
+import ProjectSamplesSlider from '../ProjectSamplesSlider/ProjectSamplesSlider';
 
 const Content = () => {
     return ( 
@@ -15,6 +17,8 @@ const Content = () => {
                 <Category/>
                 <AboutUsLanding/>
                 <ServicesLanding/>
+                <ProjectSamples/>
+                <ProjectSamplesSlider/>
             </div>
         </Fragment>
      );
