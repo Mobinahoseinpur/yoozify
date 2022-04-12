@@ -8,6 +8,7 @@ import ServicesLanding from '../servicesLanding/ServicesLanding';
 import ProjectSamples from '../project samples/ProjectSamples';
 import ProjectSamplesSlider from '../ProjectSamplesSlider/ProjectSamplesSlider';
 import TeamLanding from '../teamLanding/TeamLanding'
+import BlogLanding from '../blogLanding/BlogLanding'
 
 const Content = () => {
     return ( 
@@ -21,6 +22,7 @@ const Content = () => {
                 <ProjectSamples/>
                 <ProjectSamplesSlider/>
                 <TeamLanding/>
+                <BlogLanding/>
             </div>
         </Fragment>
      );
