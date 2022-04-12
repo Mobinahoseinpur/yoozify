@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const ServicesLanding = () => {
     return ( 
         <Fragment >
-            <div className={`${styles.test} container row`}>
+            <div className={`${styles.mainbox} container row`}>
                 <div className={`${styles.box} col-sm-3`}>  
                     <img className={`${styles.photo}`} src={image} alt=''/>
                     <h2 className={`${styles.title}`}>طراحی سایت و اپلیکشن</h2>

@@ -1,3 +1,7 @@
+.mainbox{
+    /* background-color: red; */
+    margin: 0 auto;
+}
 .box{
 /* display: flex;
 justify-content: space-around; */
@@ -29,8 +33,4 @@ height: 181px;
 font-family: 'IRANSans(FaNum)';
 font-size: 22px;
 margin: 20px 0 10px;
-}
-.test{
-    /* background-color: red; */
-    margin: 0 auto;
 }
