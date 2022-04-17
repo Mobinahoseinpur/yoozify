@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import styles from './ProjectSamplesSlider.module.css'
-import image from './../../asset/Intersect3.png'
+import image from './../../../asset/Intersect3.png'
 const ProjectSamplesSlider = () => {
     return ( 
         <Fragment>

@@ -5,10 +5,12 @@ const Category = () => {
     return (
          <Fragment>
             <div className={`${styles.mainbox} row col-12`}>
+                
                 <div className={`${styles.box} col d-flex justify-content-between`}>mobin</div>
                 <div className={`${styles.box} col `}>mobin</div>
                 <div className={`${styles.box} col `}>mobin</div>
                 <div className={`${styles.box} col `}>mobin</div>
+                
             </div>
          </Fragment>
     );

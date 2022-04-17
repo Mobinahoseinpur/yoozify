@@ -14,6 +14,7 @@ const Introduction = () => {
                 <div className={`${styles.box1} col-6`}>
                     <img className="mr-3" src={`./asset/img/p2.png`} alt=''/>
                 </div>
+                
             </div>
         </Fragment> 
     );

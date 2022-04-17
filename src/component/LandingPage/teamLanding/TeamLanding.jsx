@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import styles from './TeamLanding.module.css'
-import image from './../../asset/business-school-headshot-westport-connecticut-photo-studio 1.png'
+import image from './../../../asset/business-school-headshot-westport-connecticut-photo-studio 1.png'
 
 const TeamLanding = () => {
     return (

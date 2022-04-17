@@ -1,6 +1,6 @@
 import React,{Fragment} from 'react'
 import styles from './ProjectSamples.module.css'
-import image from './../../asset/Intersect2.png'
+import image from './../../../asset/Intersect2.png'
 
 const ProjectSamples = () => {
     return ( 

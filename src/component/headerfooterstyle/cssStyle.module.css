@@ -3,16 +3,14 @@
   display: flex;
   justify-content: center;
 }
-.flex_container {
-  /* flex-wrap: wrap; */
+/* .flex_container {
   display: flex;
   justify-content: center;
-  /* direction: rtl; */
-}
+} */
 .box {
   display: flex;
   margin-top: 44px;
-  width: 1040px;
+  width: 100%;
   background: white;
   height: 42px;
 }
@@ -26,21 +24,24 @@
   direction: rtl;
 }
 
+.logo {
+}
 .menuone {
   display: flex;
-  flex-wrap: nowrap;
+  direction: ltr;
 }
 .menu {
   margin: 0 1.4% 0;
   font-family: iranSans;
-  /* border: 2px solid rgb(248, 148, 25); */
-  font-size: 1.2vw;
+  font-size: 100%;
+  
 }
 
 .menu:hover {
+  transition: 0.4s;
   cursor: pointer;
   border-bottom: 4px solid  #0a9396;
-  ;
+  
   height: 80%;
 }
 
