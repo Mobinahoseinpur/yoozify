@@ -9,20 +9,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // import ProjectSamplesSlider from '../ProjectSamplesSlider/ProjectSamplesSlider';
 // import TeamLanding from '../teamLanding/TeamLanding'
 // import BlogLanding from '../blogLanding/BlogLanding'
+import Header from '../Header'
 
 const Content = (props) => {
     return ( 
         <Fragment>
             <div className={`${styles.content_}  container `}>
+                <Header></Header>
                 {props.children}
-                {/* <Introduction/>
-                <Category/>
-                <AboutUsLanding/>
-                <ServicesLanding/>
-                <ProjectSamples/>
-                <ProjectSamplesSlider/>
-                <TeamLanding/>
-                <BlogLanding/> */}
+        
             </div>
         </Fragment>
      );
