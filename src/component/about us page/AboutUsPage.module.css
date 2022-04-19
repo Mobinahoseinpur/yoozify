@@ -1,0 +1,43 @@
+.mainbox{
+    display: flex;
+    justify-content: center;
+}
+
+.box1{
+    width:50% ;
+
+}
+.box2{
+    width:50% ;
+    background: url("./../../asset/whatsapp.png") no-repeat; 
+    background-size: 65%;
+}
+.title{
+    margin: 30px 0 10px ;
+    background: #F4F5F7;
+    width: 333px;
+    height: 38px;  
+    display: block;
+    border-radius: 8px;
+    padding: 0 3%;
+}
+.massegebox{
+    background: #F4F5F7;
+    width: 333px;
+    height: 179px;
+    border-radius: 8px;
+    display: block;
+}
+.sendbtn{
+    margin:10px 0 ;
+    display: block;
+    width: 93px;
+    height: 47px;
+     color: white;
+    background: #0A9396;
+    border-radius: 8px;
+}
+.mapbox{
+    background: blueviolet;
+    width: 100%;
+}
