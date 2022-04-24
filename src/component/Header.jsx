@@ -13,13 +13,13 @@ function Header() {
             </div>
 
             <div className={`${styles.menuone} col-sm-5`}>
-                <div className={styles.menu}><Link to="/ContactUs"> ارتباط با ما</Link></div>
-                <div className={styles.menu}>بلاگ</div>
+                <div className={styles.menu}><Link to="/ContactUs" > ارتباط با ما</Link></div>
+                <div className={styles.menu}><Link to="/blogs">بلاگ</Link></div>
                 <div className={styles.menu}><Link to="/GetToKnowUs">اشنایی با ما</Link></div>
-                <div className={styles.menu}>مشتریان</div>
-                <div className={styles.menu}>خدمات</div>
-                {/* <Link to=''>  </Link> */}
-                <div className={styles.menu}>صفحه اصلی</div>
+                <div className={styles.menu}><Link to="/customer">مشتریان</Link></div>
+                <div className={styles.menu}><Link to="/Services">خدمات</Link></div>
+               
+                <div className={styles.menu}><Link to="/">صفحه اصلی</Link></div>
             </div>
 
 
