@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react'
-import { Link } from "react-router-dom";
+import { BrowserRouter,Route,Link,NavLink } from 'react-router-dom';
 import styles from './headerfooterstyle/cssStyle.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -13,9 +13,9 @@ function Header() {
             </div>
 
             <div className={`${styles.menuone} col-sm-5`}>
-                <div className={styles.menu}>ارتباط با ما</div>
+                <div className={styles.menu}><Link to="/ContactUs"> ارتباط با ما</Link></div>
                 <div className={styles.menu}>بلاگ</div>
-                <div className={styles.menu}>اشنایی با ما</div>
+                <div className={styles.menu}><Link to="/GetToKnowUs">اشنایی با ما</Link></div>
                 <div className={styles.menu}>مشتریان</div>
                 <div className={styles.menu}>خدمات</div>
                 {/* <Link to=''>  </Link> */}
