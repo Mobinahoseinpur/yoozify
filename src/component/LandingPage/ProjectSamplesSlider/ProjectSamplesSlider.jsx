@@ -10,9 +10,9 @@ import p3 from './3.jpg'
 const ProjectSamplesSlider = () => {
 
     const imgs=[
-        {id:0 , value:p1},
-        {id:1 , value:p2},
-        {id:2 , value:p3}
+        {id:0 , value:p1 , txt:"one"},
+        {id:1 , value:p2 , txt:"two"},
+        {id:2 , value:p3 , txt:"three"}
       ];
      
       const [sliderData , setSliderData] = useState(imgs[0])
@@ -29,34 +29,22 @@ const ProjectSamplesSlider = () => {
                 <div className={`${styles.boxright} col-6`}>
                     <div className={` ${styles.backbox}`}></div>
                     <div className={`${styles.frontbox}`}>
-
-                        {/* <Carousel> */}
-                            {/* <div>
-                                <img src={p1} className={`${styles.b}`} />
-                                <p className={`${styles.c}`}>Legend 1</p>
-                            </div>
-                             */}
-
-
                             <img src={sliderData.value} className={`${styles.frontbox}`}/>
-                                <div className="flex-row">
-
-                                {
-                                    imgs.map((data,i)=>
-                                    <div className={`${styles.nav}`}>
-                                    <img className={sliderData.id==i?"click":""} key={data.id} src={data.value} onClick={() => {handleClick(i)}} height="70" width="100"  />
-                                    </div>
-                                    )
-                                }
-                                </div>
-                        {/* </Carousel> */}
-                        {/* <img className={`${styles.frontbox}`} src={image} alt=''/> */}
                     </div>
                 </div>
-                <div className={`${styles.boxleft} col-6`}>
+                <div className={`${styles.boxleft} col-6 justify-content-center`}>
+                   <div className={`${styles.showtext} `}>{sliderData.txt}</div> 
+                <div className="flex-row">
+                    {
+                        imgs.map((data,i)=>
+                        <div className={`${styles.nav} justify-content-center `}>
+                            {/*  */}
+                            <img className={sliderData.id==i?"click":""} key={data.id} src={data.value} onClick={() => {handleClick(i)}} height="70" width="100"  />
+                        </div>
+                        )
+                    }
+                </div>
                     
-
-                    slam
                 </div>
             </div>
         </Fragment>

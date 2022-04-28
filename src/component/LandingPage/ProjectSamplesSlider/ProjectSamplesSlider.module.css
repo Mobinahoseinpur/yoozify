@@ -6,6 +6,9 @@
     justify-content: center;
 }
 .boxleft{
+    /* display: flex;
+    justify-content: space-around; */
+
     margin-top: 40px;
     width: 500px;
     height: 390px;
@@ -39,21 +42,25 @@
     top: -185px;
     
 }
-.b{
-    margin-top:-60px;
-    background-color: crimson;
-}
 
-.small{
+.showtext{
+    margin: 5px;
+    /* background-color: crimson; */
+    height: 75%;
+}
+/* .small{
     border-radius: 10px;
     width: 550px;
     height: 480px;
     position: relative;
     top: -185px;
-}
+} */
 .nav{
-    display:flex;
-    position: relative;
-    top: -90px; 
-    left: -700px;
+    display: flex;
+    justify-content: space-around;
+	align-items: flex-end;
+    margin: 0 auto;
+    float: left;
+    width: 25%;
+    /* background-color: red; */
 }

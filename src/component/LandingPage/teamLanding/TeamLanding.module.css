@@ -40,3 +40,8 @@ font-style: normal;
 font-weight: 400;
 font-size: 16px;
 }
+.titlename{
+    margin-top: 6%;
+    color: #6F6565;
+    font-family: iranSans;
+}
