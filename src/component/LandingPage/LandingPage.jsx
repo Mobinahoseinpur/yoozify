@@ -8,7 +8,8 @@ import ProjectSamples from './project samples/ProjectSamples';
 import ProjectSamplesSlider from './ProjectSamplesSlider/ProjectSamplesSlider';
 import TeamLanding from './teamLanding/TeamLanding';
 import BlogLanding from './blogLanding/BlogLanding';
-
+import styles from './LandingPage.module.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 const LandingPage = () => { 
     return ( 
         <Fragment>

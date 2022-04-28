@@ -2,9 +2,12 @@
     /* background-color: red; */
     margin: 0 auto;
 }
+.titlename{
+    color: #6F6565;
+    font-family: iranSans;
+}
 .box{
-/* display: flex;
-justify-content: space-around; */
+
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -17,6 +20,7 @@ box-shadow: 2px 2px 30px rgba(176, 176, 176, 0.25);
 border-radius: 10px;
 margin: 10px auto ;
 }
+
 .photo{
 
 margin: 32px 0 32px;
@@ -24,7 +28,7 @@ width: 271px;
 height: 174px;
 }
 .title{
-font-family: IRANSans(FaNum);
+font-family: 'IRANSans(FaNum)';
 font-size: 24px;
 }
 .txt{

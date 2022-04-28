@@ -1,15 +1,30 @@
 .mainbox{
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-direction: column; */
+    align-items: center;
+    align-content:center;
     height: 100%;
     margin: 0 auto;
-    align-content:center;
+    
 }
 .box{
+    width: 245px;
+    font-family: irr;
     height: 136px;
-    margin:0.8%;
+    margin:0.8% ;
     border-radius: 8px;
     float: left;
 
     box-shadow: 3px 3px 50px 15px rgba(176, 176, 176, 25%);
+}
+.textCategory{
+margin: 0 auto;
+font-size: 99%;
+/* background-color: aqua; */
+font-family: iranSans;
+}
+.imgcategory{
+    
+    width: 65%;
+    /* background-color: red; */
 }

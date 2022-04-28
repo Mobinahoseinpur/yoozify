@@ -1,18 +1,20 @@
 import React,{Fragment} from 'react'
 import styles from './Introduction.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import {Link} from 'react-router-dom';
 
 const Introduction = () => {
     return (
         <Fragment>
-            <div className={`${styles.mainbox}  container`}>
+            <div className={`${styles.mainbox}  container row`}>
                 
-                <div className={`${styles.box2} col-5`}>
-                    <h3>لورم ایپسوم لورم ایپسوم متن ساختگی  </h3>
-                    <h6>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می ب</h6>
+                <div className={`${styles.box2}  col-lg-6 col-md-6  col-sm-6`}>
+                    <h3 className={`${styles.font} ${styles.title}`}> چگونه در شبکه های اجتماعی شناخته شده باشیم ؟  </h3>
+                    <h5 className={`${styles.font}`}> با استراتژی کسب و کار  ، تبلیغ نویسی حرفه ای ، ارتباط با مشتریان ، اسان سازی دسترسی </h5>
+                    <Link to="customer" className={`${styles.atag}`} ><button className={`${styles.btn}`} > مشاهده پروژه </button> </Link>
                 </div>
-                <div className={`${styles.box1} col-6`}>
-                    <img className="mr-3" src={`./asset/img/p2.png`} alt=''/>
+                <div className={`${styles.box1} col-lg-6 col-md-6  col-sm-6`}>
+                    <img className={`${styles.image}`} src={`./asset/img/p2.png`} alt=''/>
                 </div>
                 
             </div>

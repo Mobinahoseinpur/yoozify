@@ -6,7 +6,7 @@ const ProjectSamples = () => {
     return ( 
         <Fragment>
             <div className={`${styles.test} container row`}>
-            
+            <h3 className={`${styles.titlename} container`}> نمونه کار </h3>
                 <div className={`${styles.box} col-sm-3`}>  
                     <img className={`${styles.photo}`} src={image} alt=''/>
                 </div>

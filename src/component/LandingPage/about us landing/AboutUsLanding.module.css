@@ -1,28 +1,50 @@
 .mainbox{
 display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	/* flex-wrap: nowrap;
 	justify-content: space-evenly;
-	align-items: stretch;
+	
 	align-content: stretch;
-    /* background: url('./Elements.svg') no-repeat 70%; 
-    background-size: 80% ;*/
+	align-items: baseline; */
+    background: url('./Elements.svg') no-repeat 99%; 
+    background-size: 92% ;
 }
 .textbox{
 	width: 50%;
-	background-color:rgb(200, 127, 255);
+	/* background: red; */
 }
 
 .textbox .textbox_title,.pararaph {
+	padding: 20px;
 	direction: rtl;
+	font-family: iranSans;
+	
+}
+.pararaph{
+	font-size: 22px;
 }
 .imgbox{
-	width: 50%;
+	display: flex;
+	width: 70%;
 	/* background-color:aquamarine; */
+}
+.image{
+	width: 110%;
+
+}
+.stylebtn{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	padding-left: 3%;
 }
 .btn{
 	background: none;
-	border-radius: 5px;
-	border:1px solid  #0A9396;
-	color: #0A9396 ;
+	height: 34px;
+    color: #0A9396;
+    border:1.5px solid #0A9396;
+    background: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-family: iranSans;
 }

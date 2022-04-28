@@ -7,6 +7,7 @@ const ServicesLanding = () => {
     return ( 
         <Fragment >
             <div className={`${styles.mainbox} container row`}>
+            <h3 className={`${styles.titlename} container`}> خدمات </h3>
                 <div className={`${styles.box} col-sm-3`}>  
                     <img className={`${styles.photo}`} src={image} alt=''/>
                     <h2 className={`${styles.title}`}>طراحی سایت و اپلیکشن</h2>

@@ -1,19 +1,46 @@
 .mainbox{
-    /* background: url('../../../public/asset/img/p2.png'  ); */
+    
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+
 	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
+
+    
 }
 
-.box1{
-    /* background: rgb(19, 179, 219); */
-}
+
 
 .box2{
     /* background: rgb(233, 107, 17); */
-    font-family: iranSans;
+    
     direction: rtl;
+    /* margin: 0 0 -5px; */
+    
+    
+}
+/* .title{} */
+
+.font{
+    font-family: iranSans;
+    padding: 10px;
+}
+
+.btn{
+    margin:20px 0 ;
+    display: block;
+    width: 93px;
+    height: 34px;
+    color: #0A9396;
+    border:1.5px solid #0A9396;
+    background: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-family: iranSans;
+    
+
+}
+.image{
+    width: 98%;
+}
+.atag{
+    text-decoration: none;
 }
