@@ -39,3 +39,21 @@
     top: -185px;
     
 }
+.b{
+    margin-top:-60px;
+    background-color: crimson;
+}
+
+.small{
+    border-radius: 10px;
+    width: 550px;
+    height: 480px;
+    position: relative;
+    top: -185px;
+}
+.nav{
+    display:flex;
+    position: relative;
+    top: -90px; 
+    left: -700px;
+}
