@@ -20,11 +20,18 @@
 .textCategory{
 margin: 0 auto;
 font-size: 99%;
+width: max-content;
 /* background-color: aqua; */
 font-family: iranSans;
 }
+.imgcategorybox{
+width: 60%;
+margin: 0 auto;
+background-color: red;
+}
 .imgcategory{
+    margin: 0 auto;
+    width: 90%;
     
-    width: 65%;
-    /* background-color: red; */
+    
 }

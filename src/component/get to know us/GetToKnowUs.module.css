@@ -16,10 +16,10 @@
 }
 
 .box2{
-    /* background: rgb(233, 107, 17); */
+    
     font-family: iranSans;
     direction: rtl;
 }
-.acardeon{
-    
-}
+/* .acardeon{
+    direction: rtl;
+} */

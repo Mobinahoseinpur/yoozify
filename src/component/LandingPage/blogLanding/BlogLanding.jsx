@@ -2,6 +2,7 @@ import React,{Fragment} from 'react'
 import styles from './BLogLanding.module.css'
 import image from './../../../asset/Intersect.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Link } from 'react-router-dom'
 
 const ServicesLanding = () => {
     return ( 
@@ -13,7 +14,7 @@ const ServicesLanding = () => {
                     <h2 className={`${styles.title}`}>طراحی سایت و اپلیکشن</h2>
                     <div className={`${styles.txt}`}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،</div>
                     <div className={`${styles.show}`}> 
-                        <div className={`${styles.showmore}`} >  مشاهده</div>
+                        <div className={`${styles.showmore}`} ><Link to="/Blogs">مشاهده</Link>  </div>
                     </div>
                 
                 </div>

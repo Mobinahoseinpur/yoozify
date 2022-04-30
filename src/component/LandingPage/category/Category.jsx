@@ -10,7 +10,8 @@ const Category = () => {
          <Fragment>
             <div className={`${styles.mainbox} container row `}>
                 
-                <div className={`${styles.box} col-sm-3 justify-content-between`}>
+                <div className={`${styles.box} col-sm-3 `}>
+                    <div className={`${styles.imgcategorybox}`}></div>
                     <img src={p2} className={`${styles.imgcategory}`}/>
                     <h2 className={`${styles.textCategory}`}>طراحی سایت و اپلیکشن</h2>
                 </div>

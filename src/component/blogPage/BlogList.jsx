@@ -1,8 +1,12 @@
 import React from 'react'
+import Content from './../content/Content'
 
 const BlogList = () => {
   return (
-    <div>BlogList</div>
+    <Content>
+      <div>BlogList</div>
+    </Content>
+    
   )
 }
 

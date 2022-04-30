@@ -33,7 +33,7 @@ const GetToKnowUs = () => {
 
             <div className={`${styles.acardeon} container`}>
 
-                <Accordion defaultActiveKey="0">
+                <Accordion defaultActiveKey="0"  >
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>سوالات پر تکرار </Accordion.Header>
                     <Accordion.Body>

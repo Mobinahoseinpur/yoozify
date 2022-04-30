@@ -2,8 +2,6 @@ import React,{Fragment} from 'react'
 import Content from '../content/Content'
 import styles from './AboutUsPage.module.css'
 
-import Googlemap from './Googlemap'
-
 const AboutUsPage = () => {
 
     return ( 
@@ -22,7 +20,8 @@ const AboutUsPage = () => {
                     <div className={`${styles.box2}`}></div>
                 </div>
                 <div className={`${styles.mapbox}`}>
-                    <Googlemap/>
+                    
+                    <iframe src="http://maps.google.com/maps?q=36.464620349141185,52.854578539352104&z=16&output=embed" className={`${styles.mapstyle}`}></iframe>
                 </div>
             </Content>
         </Fragment>
