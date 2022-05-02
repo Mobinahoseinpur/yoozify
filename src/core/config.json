@@ -1,0 +1,4 @@
+{
+    "yoozapi": "http://yoozify.herokuapp.com/",
+    "localapi": "http://localhost:3000"
+}

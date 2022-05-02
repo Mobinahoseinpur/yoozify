@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // import TeamLanding from '../teamLanding/TeamLanding'
 // import BlogLanding from '../blogLanding/BlogLanding'
 import Header from '../Header'
+import Footer from '../Footer'
 
 const Content = (props) => {
     return ( 
@@ -17,8 +18,9 @@ const Content = (props) => {
             <div className={`${styles.content_}  container `}>
                 <Header></Header>
                 {props.children}
-        
+                
             </div>
+            <Footer></Footer>
         </Fragment>
      );
 }

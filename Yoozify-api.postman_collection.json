@@ -1,0 +1,1065 @@
+{
+	"info": {
+		"_postman_id": "478045c0-1b13-4cbc-9272-315b53c6ef8d",
+		"name": "Yoozify-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "register",
+					"item": [
+						{
+							"name": "1 : register first step : http://yoozify.herokuapp.com/fa/accounts/send_otp/",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var xsrfCookie = postman.getResponseCookie(\"csrftoken\"); \r",
+											"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);\r",
+											"\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "09215784112",
+											"description": "user phone number for sending  otp (one time password)",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/send_otp/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"send_otp",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2 : regsiter second step : http://yoozify.herokuapp.com/fa/accounts/validate_otp/",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var xsrfCookie = postman.getResponseCookie(\"csrftoken\"); \r",
+											"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);\r",
+											"\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "09215784112",
+											"description": "user phone number",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "188017",
+											"description": "one time password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/validate_otp/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"validate_otp",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3 : register last stp : http://yoozify.herokuapp.com/fa/accounts/register/",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var xsrfCookie = postman.getResponseCookie(\"csrftoken\"); \r",
+											"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);\r",
+											"\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "09215784112",
+											"description": "user valid phone number",
+											"type": "text"
+										},
+										{
+											"key": "password1",
+											"value": "12345678Ab",
+											"type": "text"
+										},
+										{
+											"key": "password2",
+											"value": "12345678Ab",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "test@gmail.com",
+											"description": "email is not required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/register/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"register",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "login",
+					"item": [
+						{
+							"name": "login GET method",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/accounts/login/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"login",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login POST method",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var xsrfCookie = postman.getResponseCookie(\"csrftoken\");\r",
+											"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);\r",
+											"\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response has a JSON body\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "staff",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678Ab",
+											"type": "text"
+										},
+										{
+											"key": "remember_me",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/login/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"login",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login using phone number GET method",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/accounts/login-phone/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"login-phone",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login using phone number POST method",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var xsrfCookie = postman.getResponseCookie(\"csrftoken\");\r",
+											"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);\r",
+											"\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "091111111111",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678Ab",
+											"type": "text"
+										},
+										{
+											"key": "remember_me",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/login-phone/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"login-phone",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"item": [
+						{
+							"name": "logout",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var xsrfCookie = postman.getResponseCookie(\"csrftoken\");\r",
+											"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);\r",
+											"\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/accounts/logout/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"logout",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "change password",
+					"item": [
+						{
+							"name": "Change password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var xsrfCookie = postman.getResponseCookie(\"csrftoken\"); \r",
+											"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "new_password1",
+											"value": "12345678ABc",
+											"type": "text"
+										},
+										{
+											"key": "new_password2",
+											"value": "12345678ABc",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/change_password/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"change_password",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "forgot password",
+					"item": [
+						{
+							"name": "1 : forgot password first step",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var xsrfCookie = postman.getResponseCookie(\"csrftoken\"); \r",
+											"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "09215784112",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/forgot_password_otp/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"forgot_password_otp",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2 : forgot password second step",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var xsrfCookie = postman.getResponseCookie(\"csrftoken\"); \r",
+											"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "09215784112",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "267224",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/validate_forgot_password_otp/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"validate_forgot_password_otp",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3 : forgot password last step",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var xsrfCookie = postman.getResponseCookie(\"csrftoken\"); \r",
+											"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "09215784112",
+											"type": "text"
+										},
+										{
+											"key": "new_password",
+											"value": "12345678Ab",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/change_password_otp/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"change_password_otp",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "phone number",
+					"item": [
+						{
+							"name": "retrieve user current phone number",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/accounts/phones/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"phones",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "1 :getting link for changing user phone number",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var xsrfCookie = postman.getResponseCookie(\"csrftoken\"); \r",
+											"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "09027131684",
+											"description": "user new phone number",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/phones/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"phones",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "profile",
+					"item": [
+						{
+							"name": "user profile info",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/accounts/user_profile/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"user_profile",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update user profile",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var xsrfCookie = postman.getResponseCookie(\"csrftoken\"); \r",
+											"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "staff",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "staff@gmail.com",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "staff first_name",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "staff last_name",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "optional",
+											"type": "file",
+											"src": "/C:/Users/keyva/Downloads/back-img-2.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/user_profile/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"user_profile",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "team",
+					"item": [
+						{
+							"name": "list of team members",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/accounts/team/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"team",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "profile detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/accounts/profiles/{{user id}}/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"profiles",
+										"{{user id}}",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Blogs",
+			"item": [
+				{
+					"name": "blog list",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/blog/list/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"blog",
+								"list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blog detail",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/blog/detail/{{blog_id}}/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"blog",
+								"detail",
+								"{{blog_id}}",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/blog/list/?search=first",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"blog",
+								"list",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "first"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact us",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/contact-us/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contact-us",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/contact-us/{{id}}/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contact-us",
+								"{{id}}",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send message",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var xsrfCookie = postman.getResponseCookie(\"csrftoken\"); \r",
+									"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test title",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Incididunt strip steak proident, ea ground round velit tenderloin et biltong prosciutto. Turkey shoulder magna pork chop, nisi eu tri-tip pork venison jerky occaecat. Laboris turducken flank pig, dolor sausage magna tempor pork chop dolore reprehenderit velit cillum. Adipisicing drumstick prosciutto, meatloaf tongue tri-tip ground round ullamco shank ea dolore non jowl. Beef rump burgdoggen ribeye ut ipsum capicola non venison drumstick sint proident pig.",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/contact-us/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contact-us",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

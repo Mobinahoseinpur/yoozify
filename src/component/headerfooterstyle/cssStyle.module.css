@@ -1,13 +1,12 @@
+
+/* header */
 .mother {
   width: 100%;
   display: flex;
   justify-content: center;
   margin: -15px 0 15px;
 }
-/* .flex_container {
-  display: flex;
-  justify-content: center;
-} */
+
 .box {
   display: flex;
   margin-top: 44px;
@@ -56,4 +55,12 @@
   color: #161D3A;
   
 
+}
+
+/* footer */
+.linefooter{
+  width: 100%;
+}
+.mainfootediv{
+  background-color: red;
 }

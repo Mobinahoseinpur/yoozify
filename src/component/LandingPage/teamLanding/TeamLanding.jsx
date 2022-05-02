@@ -7,7 +7,7 @@ const TeamLanding = () => {
     return (
         <Fragment>
              <div className={`${styles.mainbox} container row`}>
-             <h3 className={`${styles.titlename} container`}> نمونه کار </h3>
+             <h3 className={`${styles.titlename} container`}>  اعضای تیم </h3>
                  <div className={`${styles.box}`}>
                      <img className={`${styles.personalimage} d-flex justify-content-center`} src={image} alt=''/>
                      <div className={`${styles.frontgradient}  `}></div>
