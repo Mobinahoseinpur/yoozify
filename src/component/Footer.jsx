@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react'
-import { BrowserRouter,Route,Link,NavLink } from 'react-router-dom';
+// import { BrowserRouter,Route,Link,NavLink } from 'react-router-dom';
 import styles from './headerfooterstyle/cssStyle.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import p from './../asset/footer.svg'

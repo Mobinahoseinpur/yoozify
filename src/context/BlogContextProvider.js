@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createContext } from 'react';
 
 // API
-import { getBlogs } from './../services/API';
+import { getBlogs } from '../services/api';
 
 export const BlogsContext = createContext();
 

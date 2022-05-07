@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import styles from './Category.module.css'
-import p1 from './mobile.svg'
+// import p1 from './mobile.svg'
 import p2 from './laptop.svg'
 import p3 from './camera.svg'
 import p4 from './chart.svg'

@@ -1,20 +1,27 @@
-import React,{Fragment} from 'react'
+import React,{Fragment,useState,useEffect} from 'react'
+//API
+import {postContactUs} from './../../services/api'
 import Content from '../content/Content'
 import styles from './AboutUsPage.module.css'
 
+
 const AboutUsPage = () => {
+    const [data , setData]=useState([])
+    const [title , setTitle]= useState('')
+    const [body , setbody]= useState('')
+    
 
     return ( 
         <Fragment>
             <Content>
                 <div className={`${styles.mainbox}`}>
                     <div className={`${styles.box1}`}>
-                        <form>
-                            <label className={`${styles.partitiontitle}`}> ارتباط با ما</label>
-                            <input type="text" className={`${styles.title}`} placeholder="عنوان" />
-                            <input type="text" className={`${styles.massegebox}`} placeholder="متن..."/>
+                        <label className={`${styles.partitiontitle}`}> ارتباط با ما</label>
+                        <form onSubmit={handleSubmit}>
+                            <input type="text" name="title" className={`${styles.title}`} placeholder="عنوان" />
+                            <input type="text" name="content" className={`${styles.massegebox}`} placeholder="متن..."/>
 
-                            <input type="button" className={`${styles.sendbtn}`} value="ارسال" />
+                            <input type="submit" className={`${styles.sendbtn}`} value="ارسال" />
                         </form>
                     </div>
                     <div className={`${styles.box2}`}></div>
@@ -29,3 +36,16 @@ const AboutUsPage = () => {
 }
  
 export default AboutUsPage;
+
+
+// const handleSubmit=(event)=> {
+//     event.preventDefault();
+//     const data = new FormData(event.target.value);
+
+//     console.log(data.get()); // reference by form input's `name` tag
+
+//     fetch('http://yoozify.herokuapp.com/contact-us/', {
+//       method: 'POST',
+//       body: data,
+//     });
+//   }

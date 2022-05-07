@@ -7,17 +7,35 @@
     
 }
 
+.box1{
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.box1 .image{
+    width: 98%;
+}
+/* anim */
 
+@keyframes clipMe{
+  0%, 100%{clip: rect(0, 500px, 200px, 0);}
+  25%{clip: rect(0, 200px, 400px, 0);}
+  50%{clip: rect(98px, 400px, 400px, 0);}
+  75%{clip: rect(0, 400px, 100px, 200px);}
+}
+.box1::before,
+.box1::after{
+  content: "";
+  position: absolute; top: 0; left: 0;
+  width: 110%; height: 110%; margin: -5%;
+  box-shadow: inset0002px #33311e;
+  animation: clipMe 3s linear infinite;
+}
+.box1::before{animation-delay: -1.5s;}
 
 .box2{
-    /* background: rgb(233, 107, 17); */
-    
-    direction: rtl;
-    /* margin: 0 0 -5px; */
-    
-    
+    direction: rtl;  
 }
-/* .title{} */
 
 .font{
     font-family: iranSans;
@@ -38,9 +56,37 @@
     
 
 }
-.image{
-    width: 98%;
-}
 .atag{
     text-decoration: none;
 }
+
+/* test */
+/* <div class="clip">
+  <img src="js.png" />
+</div> */
+
+.clip{
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 90px;
+  height: 90px;}
+.clip img{
+    width: 90%;
+     height: 90%;
+    }
+@keyframes clipMe{
+  0%, 100%{clip: rect(0, 100px, 2px, 0);}
+  25%{clip: rect(0, 2px, 100px, 0);}
+  50%{clip: rect(98px, 100px, 100px, 0);}
+  75%{clip: rect(0, 100px, 100px, 98px);}
+}
+.clip::before,
+.clip::after{
+  content: "";
+  position: absolute; top: 0; left: 0;
+  width: 110%; height: 110%; margin: -5%;
+  box-shadow: inset0002px #f7df1c;
+  animation: clipMe 3s linear infinite;
+}
+.clip::before{animation-delay: -1.5s;}

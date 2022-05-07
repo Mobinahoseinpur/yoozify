@@ -37,9 +37,9 @@ const ProjectSamplesSlider = () => {
                 <div className="flex-row">
                     {
                         imgs.map((data,i)=>
-                        <div className={`${styles.nav} justify-content-center `}>
+                        <div className={`${styles.nav} justify-content-center `} key={data.id}>
                             {/*  */}
-                            <img className={sliderData.id==i?"click":""} key={data.id} src={data.value} onClick={() => {handleClick(i)}} height="70" width="100"  />
+                            <img className={sliderData.id==i?"click":""}  src={data.value} onClick={() => {handleClick(i)}} height="70" width="100"  />
                         </div>
                         )
                     }
